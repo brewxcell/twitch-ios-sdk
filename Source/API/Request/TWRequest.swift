@@ -396,8 +396,8 @@ struct TWOAuthRequest: TWRequest {
         TWParam("response_type", "token"),
         TWParam("redirect_uri", Twitch.config.redirectUri),
         TWParam("scope", Twitch.config.urlEncodedScopes),
-        TWParam("force_verify", "false"),
-        TWParam("state", "QjgX565URhyvAXn9")
+        TWParam("force_verify", "true"),
+        TWParam("state", "vo7fw68h4jjowiffsupnhuockr4ize")
     ]
     var body: Data?
 }
