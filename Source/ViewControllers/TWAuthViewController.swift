@@ -74,6 +74,7 @@ extension TWAuthViewController: WKNavigationDelegate {
     private func handleRedirect(url: URL?) {
         if isCorrectRedirectURL(webView.url), let token = extractFragment("access_token", from: webView.url) {
             Twitch.credentials.set(accessToken: token)
+            self.delegate?.didFetchToken(token)
             dismiss(animated: true, completion: nil)
         }
     }
